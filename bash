@@ -13,3 +13,5 @@ alias ls="ls --color"
 shopt -s checkwinsize
 
 stty -ixon
+
+TERM=xterm-256color
