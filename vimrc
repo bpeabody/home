@@ -108,5 +108,3 @@ let g:tex_flavor='latex'
 if exists("&colorcolumn")
     set colorcolumn=80
 endif
-
-set tags+=~/trunk/tags
