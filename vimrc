@@ -4,14 +4,11 @@ set hidden
 " use ghc functionality for haskell files
 au Bufenter *.hs compiler ghc
 
-" configure browser for haskell_doc.vim
-let g:haddock_browser = "/Applications/Firefox.app/Contents/MacOS/firefox"
-
 " use +/- directly to resize windows
 map - <C-W>-
 map + <C-W>+
 
-colorscheme ir_black
+colorscheme herald
 
 syntax on " syntax coloring
 
