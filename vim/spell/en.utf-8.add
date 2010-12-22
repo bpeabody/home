@@ -43,3 +43,6 @@ API
 datalayer
 javascript
 ll/!
+const
+strlen
+memcpy
