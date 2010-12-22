@@ -11,7 +11,7 @@ let g:haddock_browser = "/Applications/Firefox.app/Contents/MacOS/firefox"
 map - <C-W>-
 map + <C-W>+
 
-colorscheme herald
+colorscheme ir_black
 
 syntax on " syntax coloring
 
