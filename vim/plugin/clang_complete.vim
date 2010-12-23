@@ -48,6 +48,12 @@
 "       path.
 "       Default: 'clang'
 "
+"  - g:clang_parameters:
+"       Options to pass to clang.
+"       Note: Use this to configure clang, for example, to add include
+"       directories.
+"       Default: ''
+"
 "  - g:clang_user_options:
 "       Option added at the end of clang command. Useful if you want to
 "       filter the result, or if you want to ignore the error code
@@ -155,6 +161,10 @@ function s:ClangCompleteInit()
 
     if expand('%:e') =~ 'h*'
         let b:clang_parameters .= '-header'
+    endif
+
+    if exists('g:clang_parameters')
+        let b:clang_parameters .= g:clang_parameters
     endif
 
     setlocal completefunc=ClangComplete
