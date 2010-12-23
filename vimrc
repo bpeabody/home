@@ -105,3 +105,6 @@ let g:tex_flavor='latex'
 if exists("&colorcolumn")
     set colorcolumn=80
 endif
+
+
+let g:clang_complete_copen = 1 " tell clang to display quickfix errors
