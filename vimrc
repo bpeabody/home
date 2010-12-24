@@ -8,7 +8,7 @@ au Bufenter *.hs compiler ghc
 map - <C-W>-
 map + <C-W>+
 
-colorscheme herald
+colorscheme elflord
 
 syntax on " syntax coloring
 
