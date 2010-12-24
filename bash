@@ -8,10 +8,8 @@ shopt -s cdspell
 
 set -o vi
 
-alias ls="ls --color"
-
 shopt -s checkwinsize
 
 stty -ixon
 
-TERM=xterm-256color
+export TERM=xterm-256color
