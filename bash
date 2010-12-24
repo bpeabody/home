@@ -11,5 +11,3 @@ set -o vi
 shopt -s checkwinsize
 
 stty -ixon
-
-export TERM=xterm-256color
