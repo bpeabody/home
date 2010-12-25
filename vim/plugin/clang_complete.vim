@@ -48,7 +48,7 @@
 "       path.
 "       Default: 'clang'
 "
-"  - g:clang_user_parameters:
+"  - g:clang_parameters:
 "       Options to pass to clang.
 "       Note: Use this to configure clang, for example, to add include
 "       directories.
@@ -163,6 +163,10 @@ function s:ClangCompleteInit()
         let b:clang_parameters .= '-header'
     endif
 
+    if exists('g:clang_parameters')
+        let b:clang_parameters .= g:clang_parameters
+    endif
+
     setlocal completefunc=ClangComplete
     setlocal omnifunc=ClangComplete
 
@@ -172,10 +176,6 @@ function s:ClangCompleteInit()
         augroup end
     endif
 endfunction
-
-if !exists('g:clang_user_parameters')
-    let g:clang_user_parameters = ''
-endif
 
 function s:GetKind(proto)
     if a:proto == ''
@@ -214,10 +214,7 @@ function s:DoPeriodicQuickFix()
     let l:command = g:clang_exec . ' -cc1 -fsyntax-only'
                 \ . ' -fno-caret-diagnostics -fdiagnostics-print-source-range-info'
                 \ . ' ' . l:escaped_tempfile
-                \ . ' ' . b:clang_parameters
-                \ . ' ' . g:clang_user_parameters
-                \ . ' ' . b:clang_user_options
-                \ . ' ' . g:clang_user_options
+                \ . ' ' . b:clang_parameters . ' ' . b:clang_user_options . ' ' . g:clang_user_options
 
     let l:clang_output = split(system(l:command), "\n")
     call delete(l:tempfile)
@@ -354,9 +351,7 @@ function ClangComplete(findstart, base)
                     \ . ' -fno-caret-diagnostics -fdiagnostics-print-source-range-info'
                     \ . ' -code-completion-at=' . l:escaped_tempfile . ':'
                     \ . line('.') . ':' . b:col . ' ' . l:escaped_tempfile
-                    \ . ' ' . b:clang_parameters
-                    \ . ' ' . g:clang_user_parameters
-                    \ . ' ' . b:clang_user_options . ' ' . g:clang_user_options
+                    \ . ' ' . b:clang_parameters . ' ' . b:clang_user_options . ' ' . g:clang_user_options
         let l:clang_output = split(system(l:command), "\n")
         call delete(l:tempfile)
 
