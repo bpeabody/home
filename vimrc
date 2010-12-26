@@ -69,25 +69,6 @@ imap <C-k> <esc>:A<CR>
 map <C-a> :e #<CR>
 imap <C-a> <esc>:e #<CR>
 
-" OmniCppComplete
-let OmniCpp_NamespaceSearch = 1
-let OmniCpp_GlobalScopeSearch = 1
-let OmniCpp_ShowAccess = 1
-let OmniCpp_MayCompleteDot = 1
-let OmniCpp_MayCompleteArrow = 1
-let OmniCpp_MayCompleteScope = 1
-let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD", "BloombergLP"]
-" automatically open and close the popup menu / preview window
-au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
-set completeopt=menuone,menu,longest,preview
-
-let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
-let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', "&completefunc", "&lookupfun"]
-let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>", "&lookupfun:<c-x><c-p>"]
-
-"let g:SuperTabDefaultCompletionType = "<c-x><c-p>"
-let g:SuperTabLongestHighlight = 1
-
 " Pull word under cursor into LHS of a substitute
 :nnoremap <Leader>z :%s/\<<C-r><C-w>\>/
 
