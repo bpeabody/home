@@ -1,4 +1,5 @@
 set nocompatible
+set nocp
 set hidden
 
 " use ghc functionality for haskell files
@@ -31,6 +32,9 @@ set scrolloff=3    " keep some context when scrolling
 
 " temporarily get rid of highlight with leader n
 nmap <silent> <leader>n :silent :nohlsearch<CR>
+
+" set working directory to that of the current file
+map <leader>cd :cd %:p:h<CR>
 
 " show whitespace
 set listchars=tab:>-,trail:·
