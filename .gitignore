@@ -2,4 +2,4 @@
 *.swp
 vim/ftplugin/latex-suite/bibtools.pyc
 vim/ftplugin/latex-suite/outline.pyc
-
+sessions
