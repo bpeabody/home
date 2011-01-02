@@ -57,21 +57,36 @@ filetype on
 filetype plugin on
 filetype indent on
 
+function! l:buildAndMakeTags()
+  wa
+  silent !ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .
+  make
+endfunction
+
+function! l:buildAndRun()
+    call l:buildAndMakeTags()
+    !sh ./run.sh
+endfunction
+
+" map f5 to make
+map <F5> ::call l:buildAndRun()<CR>
+imap <F5> <esc>:call l:buildAndRun()<CR>
+
 " map f7 to make
-map <F7> :wa<CR>:make<CR>
-imap <F7> <esc>:wa<CR>:make<CR>
+map <F7> ::call l:buildAndRun()<CR>
+imap <F7> <esc>:call l:buildAndRun()<CR>
 
 " map ctrl-s to save
 map <C-s> :wa<CR>
-imap <C-s> <esc>:wa<CR>
+imap <C-s> <esc>:wa<CR>i
 
 " map ctrl-o to switch btwn header/cpp file
 map <C-k> :A<CR>
-imap <C-k> <esc>:A<CR>
+imap <C-k> <esc>:A<CR>i
 
 " edit last
 map <C-a> :e #<CR>
-imap <C-a> <esc>:e #<CR>
+imap <C-a> <esc>:e #<CR>i
 
 " Pull word under cursor into LHS of a substitute
 :nnoremap <Leader>z :%s/\<<C-r><C-w>\>/
@@ -90,14 +105,6 @@ let g:tex_flavor='latex'
 if exists("&colorcolumn")
     set colorcolumn=80
 endif
-
-function! l:buildTags()
-  !ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .
-endfunction
-
-" f6 builds local tags file
-map <F6> :wa<CR>:call l:buildTags()<CR>
-imap <F6> <esc>:wa<CR>:call l:buildTags()<CR>
 
 " OmniCppComplete
 let OmniCpp_NamespaceSearch = 1
