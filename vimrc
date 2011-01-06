@@ -80,7 +80,7 @@ imap <F7> <esc>:call l:buildAndRun()<CR>
 map <C-s> :wa<CR>
 imap <C-s> <esc>:wa<CR>i
 
-" map ctrl-o to switch btwn header/cpp file
+" map to switch btwn header/cpp file
 map <C-k> :A<CR>
 imap <C-k> <esc>:A<CR>i
 
