@@ -73,8 +73,8 @@ map <F5> ::call l:buildAndRun()<CR>
 imap <F5> <esc>:call l:buildAndRun()<CR>
 
 " map f7 to make
-map <F7> ::call l:buildAndRun()<CR>
-imap <F7> <esc>:call l:buildAndRun()<CR>
+map <F7> ::call l:buildAndMakeTags()<CR>
+imap <F7> <esc>:call l:buildAndMakeTags()<CR>
 
 " map ctrl-s to save
 map <C-s> :wa<CR>
