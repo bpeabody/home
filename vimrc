@@ -91,6 +91,9 @@ imap <C-a> <esc>:e #<CR>i
 " Pull word under cursor into LHS of a substitute
 :nnoremap <Leader>z :%s/\<<C-r><C-w>\>/
 
+" hit colon from command mode without shift!
+map ; :
+
 " tex stuff
 " IMPORTANT: grep will sometimes skip displaying the file name if you
 " search in a singe file. This will confuse Latex-Suite. Set your grep
