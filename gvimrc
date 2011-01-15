@@ -5,3 +5,5 @@ set guioptions-=L
 set guioptions-=r
 
 colorscheme herald
+
+set fuoptions=maxvert,maxhorz
