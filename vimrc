@@ -5,10 +5,6 @@ set hidden
 " use ghc functionality for haskell files
 au Bufenter *.hs compiler ghc
 
-" use +/- directly to resize windows
-map - <C-W>-
-map + <C-W>+
-
 colorscheme elflord
 
 syntax on " syntax coloring
