@@ -80,7 +80,7 @@ imap <F7> <esc>:call l:buildAndMakeTags()<CR>
 map <C-s> :wa<CR>
 imap <C-s> <esc>:wa<CR>i
 
-" map ctrl-o to switch btwn header/cpp file
+" map to switch btwn header/cpp file
 map <C-k> :A<CR>
 imap <C-k> <esc>:A<CR>i
 
@@ -90,6 +90,9 @@ imap <C-a> <esc>:e #<CR>i
 
 " Pull word under cursor into LHS of a substitute
 :nnoremap <Leader>z :%s/\<<C-r><C-w>\>/
+
+" hit colon from command mode without shift!
+map ; :
 
 " tex stuff
 " IMPORTANT: grep will sometimes skip displaying the file name if you
