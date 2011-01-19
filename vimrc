@@ -130,3 +130,4 @@ autocmd FileType tex call InitForTex()
 
 " easy escape
 imap jj <Esc>
+imap kj <Esc>
