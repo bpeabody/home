@@ -78,7 +78,7 @@ imap <F7> <esc>:call l:buildAndMakeTags()<CR>
 
 " map ctrl-s to save
 map <C-s> :wa<CR>
-imap <C-s> <esc>:wa<CR>i
+imap <C-s> <esc>:wa<CR>
 
 " map to switch btwn header/cpp file
 map <C-k> :A<CR>
