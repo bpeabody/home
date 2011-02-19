@@ -6,7 +6,7 @@ bind b focus bottom
 defflow auto
 
 # Scrollback buffer size in lines
-defscrollback 5000
+defscrollback 500000
 
 # # modify the termcap/terminfo when I'm using XTerm.
 terminfo xterm* LP
