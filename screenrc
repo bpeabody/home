@@ -3,13 +3,13 @@ bind k focus up
 bind t focus top
 bind b focus bottom
 
-defflow auto
+#defflow auto
 
 # Scrollback buffer size in lines
 defscrollback 500000
 
 # # modify the termcap/terminfo when I'm using XTerm.
-terminfo xterm* LP
+#terminfo xterm* LP
 #
 # # Support alternate screens so that, for example, when you 
 # # quit out of vi, the display is redrawn as it was before vi
