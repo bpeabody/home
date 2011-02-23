@@ -6,3 +6,5 @@ set guioptions-=L
 set guioptions-=r
 
 colorscheme herald
+" when going into fullscreen, really use the whole screen
+"set fuoptions=maxvert,maxhorz

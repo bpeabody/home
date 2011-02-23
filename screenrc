@@ -2,3 +2,53 @@ bind j focus down
 bind k focus up
 bind t focus top
 bind b focus bottom
+
+#defflow auto
+
+# Scrollback buffer size in lines
+defscrollback 500000
+
+# # modify the termcap/terminfo when I'm using XTerm.
+#terminfo xterm* LP
+#
+# # Support alternate screens so that, for example, when you 
+# # quit out of vi, the display is redrawn as it was before vi
+# # redrew the full screen.
+altscreen on
+#
+# # don't display the copyright page
+startup_message off
+#
+# # detach on hangup - if my dial-up session fails, screen will simply
+# # detach and let me re re-attach later.
+autodetach on
+#
+msgwait 2 # 1 second messages
+#
+# # Start a number of initial shells and give them titles which show up in the
+# status-line
+# screen -t CCase    0 bash
+# screen -t Sun1     1 bash
+# screen -t Sun2     2 bash
+# screen -t CCase    3 bash
+# screen -t Rich     6 bash
+# screen -t Pine     7 bash
+# screen -t Pine     8 bash
+# screen -t News     9 bash
+# screen
+
+# remove some stupid / dangerous key bindings
+bind k
+bind W
+bind ^k
+bind .
+bind ^\
+bind \\
+bind ^h
+bind h
+#make them better
+bind 'K' kill
+#bind 'I' login on
+#bind 'O' login off
+#bind '}' history
+bind 'W' windowlist
