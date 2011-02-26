@@ -12,3 +12,5 @@
 	co = checkout
 	com = commit
 	st = status
+    pl = pull
+    ps = push
