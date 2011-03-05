@@ -62,7 +62,7 @@ let g:haddock_moduleindex = {}
   "let g:haddock_browser = "C:/Program Files/Opera/Opera.exe"
   "let g:haddock_browser = "C:/Program Files/Mozilla Firefox/firefox.exe"
   "let g:haddock_browser = "C:/Program Files/Internet Explorer/IEXPLORE.exe"
-let g:haddoc_browser = "open"
+let g:haddock_browser = "open"
 if !exists("g:haddock_browser")
   echoerr s:scriptname." WARNING: please set g:haddock_browser!"
 endif
