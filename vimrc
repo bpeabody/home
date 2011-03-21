@@ -85,8 +85,7 @@ map <C-k> :A<CR>
 imap <C-k> <esc>:A<CR>i
 
 " edit last
-map <C-a> :e #<CR>
-imap <C-a> <esc>:e #<CR>i
+map <Leader>a :e #<CR>
 
 " Pull word under cursor into LHS of a substitute
 :nnoremap <Leader>z :%s/\<<C-r><C-w>\>/
