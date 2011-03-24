@@ -16,4 +16,4 @@ if [ -f /opt/local/etc/bash_completion ]; then
     . /opt/local/etc/bash_completion
 fi
 
-alias gitkcl="git log --pretty=format:"%h : %s" --topo-order --graph"
+alias gitkcl="git log --pretty=format:\"%h : %s\" --topo-order --graph"
