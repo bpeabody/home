@@ -97,3 +97,8 @@ argement/!
 StringResult
 ProtocolImpl
 templatized
+InternedString
+ttfamily
+scriptsize
+internString
+lookupString
