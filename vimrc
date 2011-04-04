@@ -130,3 +130,6 @@ autocmd FileType tex call InitForTex()
 " easy escape
 imap jj <Esc>
 imap kj <Esc>
+
+" when joining, put two spaces after '.', '?', and '!'
+set joinspaces
