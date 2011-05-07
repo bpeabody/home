@@ -13,3 +13,4 @@ shopt -s checkwinsize
 stty -ixon
 
 alias gitkcl="git log --pretty=format:\"%h : %s\" --topo-order --graph"
+alias ssh="ssh -X"
