@@ -24,7 +24,7 @@ set ruler          " column count
 set visualbell     " don't beep when error, make screen flash
 set ignorecase     " perform case-insensitve searches
 set smartcase      " searches are case sensitive if there is one capital letter
-set nu             " enable line numbers
+"set nu             " enable line numbers
 set hlsearch       " highlights search matches
 set incsearch      " search as you type
 set history=1000   " remember more
@@ -128,7 +128,6 @@ endfunction
 autocmd FileType tex call InitForTex()
 
 " easy escape
-imap jj <Esc>
 imap kj <Esc>
 
 " when joining, put two spaces after '.', '?', and '!'
