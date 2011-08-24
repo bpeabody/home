@@ -59,7 +59,7 @@ filetype indent on
 
 function! l:buildAndMakeTags()
   wa
-  silent !ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .
+  " silent !ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .
   make
 endfunction
 
