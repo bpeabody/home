@@ -127,6 +127,13 @@ endfunction
 
 autocmd FileType tex call InitForTex()
 
+function! InitForXml()
+    set tabstop=2
+    set shiftwidth=2
+endfunction
+
+autocmd FileType xml call InitForXml()
+
 " easy escape
 imap kj <Esc>
 
