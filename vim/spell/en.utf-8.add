@@ -168,3 +168,5 @@ jsonish
 ReferenceCounted
 ABIs
 ABI
+BuiltinFunctionEntry
+pseudocode
