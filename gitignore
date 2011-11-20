@@ -46,3 +46,4 @@ repos
 .gdb_history
 .darcs
 bare
+run.sh
