@@ -2,7 +2,7 @@ export EDITOR="vim"
 export HISTSIZE=100000
 export HISTFILESIZE=100000
 
-export PS1='\! $(hostname):\w$ '
+export PS1='\! $(hostname):$ '
 
 shopt -s cdspell
 
