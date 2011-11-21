@@ -142,3 +142,14 @@ ttfamily
 scriptsize
 internString
 lookupString
+unsubscribe
+unsubscribed
+GtkComboBox
+o
+ClientDesignerCreate
+newWidgetName
+gobxmlName
+gobxml
+JS
+init
+reparent

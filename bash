@@ -9,6 +9,7 @@ shopt -s cdspell
 set -o vi
 
 shopt -s checkwinsize
+shopt -s histappend
 
 stty -ixon
 
