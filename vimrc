@@ -24,7 +24,7 @@ set ruler          " column count
 set visualbell     " don't beep when error, make screen flash
 set ignorecase     " perform case-insensitve searches
 set smartcase      " searches are case sensitive if there is one capital letter
-set nu             " enable line numbers
+"set nu             " enable line numbers
 set hlsearch       " highlights search matches
 set incsearch      " search as you type
 set history=1000   " remember more
@@ -59,7 +59,7 @@ filetype indent on
 
 function! l:buildAndMakeTags()
   wa
-  silent !ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .
+  " silent !ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .
   make
 endfunction
 
@@ -127,6 +127,15 @@ endfunction
 
 autocmd FileType tex call InitForTex()
 
+function! InitForXml()
+    set tabstop=2
+    set shiftwidth=2
+endfunction
+
+autocmd FileType xml call InitForXml()
+
 " easy escape
-imap jj <Esc>
 imap kj <Esc>
+
+" when joining, put two spaces after '.', '?', and '!'
+set joinspaces
