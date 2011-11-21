@@ -52,3 +52,5 @@ bind 'K' kill
 #bind 'O' login off
 #bind '}' history
 bind 'W' windowlist
+
+shell bash
