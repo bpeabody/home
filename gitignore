@@ -41,7 +41,6 @@ temp
 *.pdf
 *.out
 common_home
-.vim
 repos
 .gdb_history
 .darcs
