@@ -47,3 +47,4 @@ repos
 .darcs
 bare
 run.sh
+.DS_Store
