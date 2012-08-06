@@ -1,5 +1,6 @@
 " remove menu bars
 set guioptions-=T
+set guifont=Monospace\ 14
 "set guioptions-=m
 "set guioptions-=l
 "set guioptions-=L
