@@ -46,3 +46,4 @@ repos
 .darcs
 bare
 run.sh
+.bake
