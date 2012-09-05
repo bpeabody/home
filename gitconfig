@@ -1,17 +1,18 @@
 [user]
-	name = Brock Peabody
-	email = brock.peabody@gmail.com
+    name = Brock Peabody
+    email = brock.peabody@gmail.com
 [color]
-	branch = auto
-	diff = auto
-	interactive = auto
-	status = auto
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
 [core]
-	excludesfile = ~/common_home/gitignore
+    excludesfile = ~/common_home/gitignore
+    eol = native
 [alias]
-	co = checkout
-	com = commit
-	st = status
+    co = checkout
+    com = commit
+    st = status
     pl = pull
     ps = push
     br = branch
