@@ -3,6 +3,7 @@ export HISTSIZE=100000
 export HISTFILESIZE=100000
 
 export PS1='\! $(hostname):\W$ '
+export PROMPT_COMMAND='history -a'
 
 shopt -s cdspell
 
