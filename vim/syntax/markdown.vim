@@ -38,13 +38,22 @@ syn match markdownBlockquote ">\s" contained nextgroup=@markdownBlock
 syn region markdownCodeBlock start="    \|\t" end="$" contained
 
 " TODO: real nesting
+<<<<<<< HEAD
 syn match markdownListMarker " \{0,4\}[-*+]\%(\s\+\S\)\@=" contained
 syn match markdownOrderedListMarker " \{0,4}\<\d\+\.\%(\s*\S\)\@=" contained
+=======
+syn match markdownListMarker "\%(\t\| \{0,4\}\)[-*+]\%(\s\+\S\)\@=" contained
+syn match markdownOrderedListMarker "\%(\t\| \{0,4}\)\<\d\+\.\%(\s*\S\)\@=" contained
+>>>>>>> f8515bff963180f0c543d2a28483747340dd858b
 
 syn match markdownRule "\* *\* *\*[ *]*$" contained
 syn match markdownRule "- *- *-[ -]*$" contained
 
+<<<<<<< HEAD
 syn match markdownLineBreak "\s\{2,\}$"
+=======
+syn match markdownLineBreak " \{2,\}$"
+>>>>>>> f8515bff963180f0c543d2a28483747340dd858b
 
 syn region markdownIdDeclaration matchgroup=markdownLinkDelimiter start="^ \{0,3\}!\=\[" end="\]:" oneline keepend nextgroup=markdownUrl skipwhite
 syn match markdownUrl "\S\+" nextgroup=markdownUrlTitle skipwhite contained

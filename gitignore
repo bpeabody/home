@@ -41,10 +41,10 @@ temp
 *.pdf
 *.out
 common_home
-.vim
 repos
 .gdb_history
 .darcs
 bare
 run.sh
 .DS_Store
+.bake

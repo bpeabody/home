@@ -9,7 +9,11 @@ endif
 runtime! ftplugin/html.vim ftplugin/html_*.vim ftplugin/html/*.vim
 
 setlocal comments=fb:*,fb:-,fb:+,n:> commentstring=>\ %s
+<<<<<<< HEAD
 setlocal formatoptions+=tcqln
+=======
+setlocal formatoptions+=tcqln formatoptions-=r formatoptions-=o
+>>>>>>> f8515bff963180f0c543d2a28483747340dd858b
 setlocal formatlistpat=^\\s*\\d\\+\\.\\s\\+\\\|^[-*+]\\s\\+
 
 if exists('b:undo_ftplugin')

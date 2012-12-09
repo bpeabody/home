@@ -1,6 +1,19 @@
 set nocompatible
 set nocp
 set hidden
+let mapleader = ","
+
+call pathogen#infect()  " install pathogen
+
+" remap motion keys for camel case
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
+sunmap w
+sunmap b
+sunmap e
+
+let g:EasyMotion_leader_key = '<Leader>'
 
 " use ghc functionality for haskell files
 au Bufenter *.hs compiler ghc
@@ -9,7 +22,8 @@ au Bufenter *.hs compiler ghc
 map - <C-W>-
 map + <C-W>+
 
-colorscheme elflord
+set background=dark
+colorscheme solarized
 
 syntax on " syntax coloring
 
@@ -31,7 +45,7 @@ set history=1000   " remember more
 set scrolloff=3    " keep some context when scrolling
 
 " temporarily get rid of highlight with leader n
-nmap <silent> <leader>n :silent :nohlsearch<CR>
+nmap <silent> <leader>v :silent :nohlsearch<CR>
 
 " set working directory to that of the current file
 map <leader>cd :cd %:p:h<CR>
@@ -139,3 +153,6 @@ imap kj <Esc>
 
 " when joining, put two spaces after '.', '?', and '!'
 set joinspaces
+
+
+nmap <leader>md :%!markdown --html4tags <cr></cr></leader>
