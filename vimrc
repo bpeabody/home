@@ -153,3 +153,6 @@ imap kj <Esc>
 
 " when joining, put two spaces after '.', '?', and '!'
 set joinspaces
+
+
+nmap <leader>md :%!markdown --html4tags <cr></cr></leader>
