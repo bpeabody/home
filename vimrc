@@ -14,7 +14,8 @@ au Bufenter *.hs compiler ghc
 map - <C-W>-
 map + <C-W>+
 
-colorscheme elflord
+set background=dark
+colorscheme solarized
 
 syntax on " syntax coloring
 
