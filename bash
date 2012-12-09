@@ -1,6 +1,7 @@
 export EDITOR="vim"
 export HISTSIZE=100000
 export HISTFILESIZE=100000
+export GIT_SSL_NO_VERIFY=1
 
 export PS1='\! $(hostname):\W$ '
 export PROMPT_COMMAND='history -a'
