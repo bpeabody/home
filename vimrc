@@ -5,6 +5,14 @@ let mapleader = ","
 
 call pathogen#infect()  " install pathogen
 
+" remap motion keys for camel case
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
+sunmap w
+sunmap b
+sunmap e
+
 let g:EasyMotion_leader_key = '<Leader>'
 
 " use ghc functionality for haskell files
