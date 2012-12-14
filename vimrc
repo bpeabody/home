@@ -71,25 +71,6 @@ filetype on
 filetype plugin on
 filetype indent on
 
-function! l:buildAndMakeTags()
-  wa
-  " silent !ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .
-  make
-endfunction
-
-function! l:buildAndRun()
-    call l:buildAndMakeTags()
-    !sh ./run.sh
-endfunction
-
-" map f5 to make
-map <F5> ::call l:buildAndRun()<CR>
-imap <F5> <esc>:call l:buildAndRun()<CR>
-
-" map f7 to make
-map <F7> ::call l:buildAndMakeTags()<CR>
-imap <F7> <esc>:call l:buildAndMakeTags()<CR>
-
 " map ctrl-s to save
 map <C-s> :wa<CR>
 imap <C-s> <esc>:wa<CR>
@@ -107,20 +88,11 @@ map <Leader>a :e #<CR>
 " hit colon from command mode without shift!
 map ; :
 
-" tex stuff
-" IMPORTANT: grep will sometimes skip displaying the file name if you
-" search in a singe file. This will confuse Latex-Suite. Set your grep
-" program to always generate a file-name.
-set grepprg=grep\ -nH\ $*
-
-" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
-" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
-" The following changes the default filetype back to 'tex':
-let g:tex_flavor='latex'
-
 if exists("&colorcolumn")
     set colorcolumn=80
 endif
+
+                              " Completion setup
 
 " OmniCppComplete
 let OmniCpp_NamespaceSearch = 1
@@ -131,15 +103,13 @@ let OmniCpp_MayCompleteDot = 1 " autocomplete after .
 let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
 let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
 let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+
 " automatically open and close the popup menu / preview window
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest,preview
 
-function! InitForTex()
-    iab ttt \texttt{
-endfunction
-
-autocmd FileType tex call InitForTex()
+" make entery key behave better on completion
+:inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 function! InitForXml()
     set tabstop=2
@@ -153,6 +123,5 @@ imap kj <Esc>
 
 " when joining, put two spaces after '.', '?', and '!'
 set joinspaces
-
 
 nmap <leader>md :%!markdown --html4tags <cr></cr></leader>
