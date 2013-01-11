@@ -76,8 +76,7 @@ map <C-s> :wa<CR>
 imap <C-s> <esc>:wa<CR>
 
 " map to switch btwn header/cpp file
-map <C-k> :A<CR>
-imap <C-k> <esc>:A<CR>i
+map <leader>k
 
 " edit last
 map <Leader>a :e #<CR>
