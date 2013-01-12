@@ -123,3 +123,8 @@ imap kj <Esc>
 
 " when joining, put two spaces after '.', '?', and '!'
 set joinspaces
+
+" set up ctrlp
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
