@@ -118,6 +118,18 @@ endfunction
 
 autocmd FileType xml call InitForXml()
 
+set dictionary=/usr/share/dict/words
+
+function! InitForText()
+    set complete+=k
+    set spell
+endfunction
+
+autocmd FileType markdown call InitForText()
+
+autocmd FileType text call InitForText()
+autocmd FileType txt call InitForText()
+
 " easy escape
 imap kj <Esc>
 
