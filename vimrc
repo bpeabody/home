@@ -117,10 +117,25 @@ endfunction
 
 autocmd FileType xml call InitForXml()
 
+set dictionary=/usr/share/dict/words
+
+function! InitForText()
+    set complete+=k
+    set spell
+endfunction
+
+autocmd FileType markdown call InitForText()
+
+autocmd FileType text call InitForText()
+autocmd FileType txt call InitForText()
+
 " easy escape
 imap kj <Esc>
 
 " when joining, put two spaces after '.', '?', and '!'
 set joinspaces
 
-nmap <leader>md :%!markdown --html4tags <cr></cr></leader>
+" set up ctrlp
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
