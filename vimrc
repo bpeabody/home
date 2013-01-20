@@ -140,3 +140,6 @@ set joinspaces
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
+
+" set up clang complete to use library version
+let g:clang_use_library = 1
