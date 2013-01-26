@@ -139,6 +139,9 @@ set joinspaces
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_regexp = 1
+let g:ctrlp_max_height = 20
+let g:ctrlp_clear_cache_on_exit = 0
 
 " use libclang
 let g:clang_use_library = 1
