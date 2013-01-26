@@ -76,8 +76,7 @@ map <C-s> :wa<CR>
 imap <C-s> <esc>:wa<CR>
 
 " map to switch btwn header/cpp file
-map <C-k> :A<CR>
-imap <C-k> <esc>:A<CR>i
+map <leader>o :A<CR>
 
 " edit last
 map <Leader>a :e #<CR>
@@ -141,5 +140,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 
-" set up clang complete to use library version
-let g:clang_use_library = 1
+" set up clang complete
+let g:ctrlp_regexp = 1
+let g:ctrlp_max_height = 20
+let g:ctrlp_clear_cache_on_exit = 0
