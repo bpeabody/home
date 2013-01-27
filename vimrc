@@ -55,6 +55,8 @@ set listchars=tab:>-,trail:·
 set list
 nmap <silent> <leader>s :set nolist!<CR>
 
+map <leader>h :cexpr system('jshint ' . @%)<CR>
+
 " scroll by 3 instead of 1
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
@@ -144,3 +146,4 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_regexp = 1
 let g:ctrlp_max_height = 20
 let g:ctrlp_clear_cache_on_exit = 0
+
