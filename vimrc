@@ -55,8 +55,6 @@ set listchars=tab:>-,trail:·
 set list
 nmap <silent> <leader>s :set nolist!<CR>
 
-map <leader>h :cexpr system('jshint ' . @%)<CR>
-
 " scroll by 3 instead of 1
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
