@@ -1,0 +1,7 @@
+{
+    "maxlen": 79,
+    "undef": true,
+    "predef" : [
+        "define"
+    ]
+}
