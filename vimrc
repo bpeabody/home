@@ -111,8 +111,8 @@ set completeopt=menuone,menu,longest,preview
 :inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 function! InitForXml()
-    set tabstop=2
-    set shiftwidth=2
+    set tabstop=4
+    set shiftwidth=4
 endfunction
 
 autocmd FileType xml call InitForXml()
@@ -145,3 +145,5 @@ let g:ctrlp_regexp = 1
 let g:ctrlp_max_height = 20
 let g:ctrlp_clear_cache_on_exit = 0
 
+
+au BufNewFile,BufRead *.bml set filetype=xml
