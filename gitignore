@@ -48,3 +48,4 @@ bare
 run.sh
 .DS_Store
 .bake
+cache/
