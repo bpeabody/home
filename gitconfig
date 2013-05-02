@@ -12,7 +12,7 @@
 [alias]
     co = checkout
     com = commit
-    st = status
+    st = status --ignore-submodules
     pl = pull
     ps = push
     br = branch

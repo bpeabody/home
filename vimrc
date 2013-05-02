@@ -110,6 +110,7 @@ set completeopt=menuone,menu,longest,preview
 " make entery key behave better on completion
 :inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
+<<<<<<< HEAD
 function! InitForXml()
     set tabstop=4
     set shiftwidth=4
@@ -117,6 +118,8 @@ endfunction
 
 autocmd FileType xml call InitForXml()
 
+=======
+>>>>>>> e864dd32f57e36cc7f13856f40c5fcbb9a5a86de
 set dictionary=/usr/share/dict/words
 
 function! InitForText()
@@ -134,6 +137,8 @@ imap kj <Esc>
 
 " when joining, put two spaces after '.', '?', and '!'
 set joinspaces
+
+au BufRead,BufNewFile *.bml setfiletype xml
 
 " set up ctrlp
 let g:ctrlp_map = '<c-p>'
