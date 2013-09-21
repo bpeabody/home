@@ -22,7 +22,7 @@ au Bufenter *.hs compiler ghc
 map - <C-W>-
 map + <C-W>+
 
-set background=dark
+"set background=light
 colorscheme solarized
 
 syntax on " syntax coloring
@@ -111,10 +111,18 @@ set joinspaces
 
 au BufRead,BufNewFile *.bml setfiletype xml
 
+" YouCompleteMe
+let g:ycm_confirm_extra_conf = 0
+
 " set up ctrlp
+map <Leader>p :CtrlPBuffer<CR>
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
+"let g:ctrlp_by_filename = 0             " match only by actual file name
+let g:ctrlp_regexp = 1                  " turn on regex, off with c-r
+let g:ctrlp_clear_cache_on_exit = 0     " don't delete cache
+let g:ctrlp_max_files = 0               " no limit
 
 " vundle setup
 set rtp+=~/.vim/bundle/vundle/
@@ -134,4 +142,7 @@ Bundle 'fugitive.vim'
 Bundle 'JavaScript-syntax'
 Bundle 'surround.vim'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'Solarized'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'scrooloose/syntastic'
+Bundle 'UltiSnips'
+Bundle 'github-theme'
