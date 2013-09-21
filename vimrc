@@ -91,25 +91,6 @@ if exists("&colorcolumn")
     set colorcolumn=80
 endif
 
-                              " Completion setup
-
-" OmniCppComplete
-let OmniCpp_NamespaceSearch = 1
-let OmniCpp_GlobalScopeSearch = 1
-let OmniCpp_ShowAccess = 1
-let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
-let OmniCpp_MayCompleteDot = 1 " autocomplete after .
-let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
-let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
-let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
-
-" automatically open and close the popup menu / preview window
-au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
-set completeopt=menuone,menu,longest,preview
-
-" make entery key behave better on completion
-:inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
 set dictionary=/usr/share/dict/words
 
 function! InitForText()
@@ -135,10 +116,22 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 
-" set up clang complete
-let g:ctrlp_regexp = 1
-let g:ctrlp_max_height = 20
-let g:ctrlp_clear_cache_on_exit = 0
+" vundle setup
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
+Bundle 'gmarik/vundle'
 
-au BufNewFile,BufRead *.bml set filetype=xml
+Bundle 'ack.vim'
+Bundle 'camelcasemotion'
+Bundle 'clang-complete'
+Bundle 'ctrlp.vim'
+Bundle 'EasyGrep'
+Bundle 'L9'
+Bundle 'The-NERD-Commenter'
+Bundle 'The-NERD-tree'
+Bundle 'EasyMotion'
+Bundle 'fugitive.vim'
+Bundle 'JavaScript-syntax'
+Bundle 'surround.vim'
+Bundle 'Tagbar'
