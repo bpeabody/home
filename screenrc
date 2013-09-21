@@ -54,3 +54,5 @@ bind 'K' kill
 bind 'W' windowlist
 
 shell bash
+
+term screen-256color
