@@ -22,7 +22,7 @@ au Bufenter *.hs compiler ghc
 map - <C-W>-
 map + <C-W>+
 
-"set background=light
+set background=dark
 colorscheme solarized
 
 syntax on " syntax coloring
