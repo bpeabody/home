@@ -132,7 +132,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-Bundle 'ack.vim'
+Bundle 'a.vim'
 Bundle 'camelcasemotion'
 Bundle 'ctrlp.vim'
 Bundle 'EasyGrep'
