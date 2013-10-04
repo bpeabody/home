@@ -2,13 +2,13 @@
     "curly"    : true,
     "eqeqeq"   : true,
     "latedef"  : true,
+    "maxlen"   : 79,
     "newcap"   : true,
     "noarg"    : true,
     "nonew"    : true,
     "quotmark" : "double",
-    "undef"    : true,
     "trailing" : true,
-    "maxlen"   : 79,
+    "undef"    : true,
 
     "globals": {
         "define": true
