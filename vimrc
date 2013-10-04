@@ -103,9 +103,6 @@ autocmd FileType markdown call InitForText()
 autocmd FileType text call InitForText()
 autocmd FileType txt call InitForText()
 
-" easy escape
-imap kj <Esc>
-
 " when joining, put two spaces after '.', '?', and '!'
 set joinspaces
 
