@@ -13,6 +13,5 @@
     co = checkout
     com = commit
     st = status --ignore-submodules
-    pl = pull
-    ps = push
     br = branch
+    pull = pull --ff-only
