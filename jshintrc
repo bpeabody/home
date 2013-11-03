@@ -3,6 +3,7 @@
     "eqeqeq"   : true,
     "latedef"  : true,
     "maxlen"   : 79,
+    "multistr" : true,
     "newcap"   : true,
     "noarg"    : true,
     "nonew"    : true,
