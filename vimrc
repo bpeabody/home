@@ -112,6 +112,8 @@ au BufRead,BufNewFile *.bml setfiletype xml
 let g:ycm_confirm_extra_conf = 0        " stop pestering about file
 let g:ycm_complete_in_comments = 1      " allow completion in comments
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_seed_identifiers_with_syntax = 1 " seed syntax
+let g:ycm_autoclose_preview_window_after_completion = 1 " close preview window
 
 " set up ctrlp
 map <Leader>p :CtrlPBuffer<CR>
@@ -138,7 +140,6 @@ Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
 Bundle 'EasyMotion'
 Bundle 'fugitive.vim'
-Bundle 'JavaScript-syntax'
 Bundle 'surround.vim'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'altercation/vim-colors-solarized'
@@ -146,3 +147,5 @@ Bundle 'scrooloose/syntastic'
 Bundle 'UltiSnips'
 Bundle 'github-theme'
 Bundle 'Markdown'
+Bundle 'pangloss/vim-javascript'
+Bundle 'vim-scripts/JavaScript-Indent'
