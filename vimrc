@@ -107,6 +107,7 @@ autocmd FileType txt call InitForText()
 set joinspaces
 
 au BufRead,BufNewFile *.bml setfiletype xml
+au BufRead,BufNewFile *.rsd setfiletype xml
 
 " YouCompleteMe
 let g:ycm_confirm_extra_conf = 0        " stop pestering about file
@@ -150,3 +151,15 @@ Bundle 'Markdown'
 Bundle 'pangloss/vim-javascript'
 Bundle 'vim-scripts/JavaScript-Indent'
 Bundle 'marijnh/tern_for_vim'
+
+                                  " TITLES "
+
+" turn on setting titles, e.g., to show edited file in tmux
+set title
+
+" 't_ts' and 't_fs' tell vim how to send the title to the shell
+set t_ts=k
+set t_fs=\
+
+" set title to "vi" and the filename
+set titlestring=vi\ %t
