@@ -1,5 +1,6 @@
 {
     "curly"    : true,
+    "es5"      : true,
     "eqeqeq"   : true,
     "latedef"  : true,
     "maxlen"   : 79,
