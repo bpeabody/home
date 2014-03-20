@@ -18,9 +18,7 @@ PROMPT_COMMAND=setBashTitle
 # This function sets the title to the value of '$BASH_COMMAND', the currently
 # running command.
 setCommandTitle() {
-    tildePWD=$(PWD)
-    [[ "$tildePWD" =~ ^"$HOME"(/|$) ]] && tildePWD="~${tildePWD#$HOME}"
-    echo -ne "\033k$BASH_COMMAND $tildePWD\033\\"
+    echo -ne "\033k$BASH_COMMAND\033\\"
 }
 
 # Use the trap to set the title to the currently running command at the time
