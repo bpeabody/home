@@ -1,9 +1,40 @@
 set nocompatible
+filetype off
+
+" vundle setup
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/vundle'
+
+Plugin 'a.vim'
+Plugin 'camelcasemotion'
+Plugin 'ctrlp.vim'
+Plugin 'EasyGrep'
+Plugin 'L9'
+Plugin 'The-NERD-Commenter'
+Plugin 'The-NERD-tree'
+Plugin 'EasyMotion'
+Plugin 'fugitive.vim'
+Plugin 'surround.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/syntastic'
+Plugin 'UltiSnips'
+Plugin 'github-theme'
+Plugin 'Markdown'
+Plugin 'pangloss/vim-javascript'
+Plugin 'vim-scripts/JavaScript-Indent'
+Plugin 'marijnh/tern_for_vim'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 set nocp
 set hidden
 let mapleader = ","
 
-call pathogen#infect()  " install pathogen
+" call pathogen#infect()  " install pathogen
 
 " remap motion keys for camel case
 map <silent> w <Plug>CamelCaseMotion_w
@@ -63,13 +94,6 @@ set wildmode=list:longest " better command mode completion
 
 " Intuitive backspacing in insert mode
 set backspace=indent,eol,start
- 
-" File-type highlighting and configuration.
-" Run :filetype (without args) to see what you may have
-" to turn on yourself, or just set them all to be sure.
-filetype on
-filetype plugin on
-filetype indent on
 
 " map ctrl-s to save
 map <C-s> :wa<CR>
@@ -124,29 +148,3 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_regexp = 1                  " turn on regex, off with c-r
 let g:ctrlp_clear_cache_on_exit = 0     " don't delete cache
 let g:ctrlp_max_files = 0               " no limit
-
-" vundle setup
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
-
-Bundle 'a.vim'
-Bundle 'camelcasemotion'
-Bundle 'ctrlp.vim'
-Bundle 'EasyGrep'
-Bundle 'L9'
-Bundle 'The-NERD-Commenter'
-Bundle 'The-NERD-tree'
-Bundle 'EasyMotion'
-Bundle 'fugitive.vim'
-Bundle 'surround.vim'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'scrooloose/syntastic'
-Bundle 'UltiSnips'
-Bundle 'github-theme'
-Bundle 'Markdown'
-Bundle 'pangloss/vim-javascript'
-Bundle 'vim-scripts/JavaScript-Indent'
-Bundle 'marijnh/tern_for_vim'
