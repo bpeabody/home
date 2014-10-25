@@ -2,7 +2,7 @@ set nocompatible
 filetype off
 
 " vundle setup
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
 
 Plugin 'gmarik/vundle'
@@ -18,6 +18,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'pangloss/vim-javascript'
 Plugin 'vim-scripts/JavaScript-Indent'
 Plugin 'marijnh/tern_for_vim'
+Plugin 'Shougo/unite.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
