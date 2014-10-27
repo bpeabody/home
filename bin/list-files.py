@@ -52,11 +52,29 @@ def listAllRoots():
     # working directory.
 
     metaFile = ".bdemetarc"
-    metaPaths = listPathsWithFile(pathChain, metaFile)
+
     result = []
-    for path in metaPaths:
-        roots = listRootsInFile(path + "/" + metaFile)
-        result.extend(roots)
+
+    # Don't look at metafile chain unless there is a metafile in the current
+    # directory.
+
+    if os.path.exists(metaFile):
+        metaPaths = listPathsWithFile(pathChain, metaFile)
+        for path in metaPaths:
+            roots = listRootsInFile(path + "/" + metaFile)
+            result.extend(roots)
+    else:
+        # Otherwise, try current directory and things listed in ".sources"
+        result.append(pwd)
+        sourcesFile = ".sources"
+        sourcePaths = listPathsWithFile(pathChain, sourcesFile)
+        for path in sourcePaths:
+            fullPath = path + "/" + sourcesFile
+            sources = open(fullPath).read().split("\n")
+            # last one will be empty, from trailing newline
+            sources = sources[:len(sources) - 1]
+            result.extend(sources)
+
     return result
 
 def listFilesInRepo(result, path):
