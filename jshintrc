@@ -13,6 +13,8 @@
     "undef"    : true,
 
     "globals": {
-        "define": true
+        "define": true,
+        "require": true,
+        "console": true
     }
 }
