@@ -18,6 +18,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'pangloss/vim-javascript'
 Plugin 'vim-scripts/JavaScript-Indent'
 Plugin 'marijnh/tern_for_vim'
+Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/unite.vim'
 
 call vundle#end()            " required
@@ -136,12 +137,32 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_seed_identifiers_with_syntax = 1 " seed syntax
 let g:ycm_autoclose_preview_window_after_completion = 1 " close preview window
 
-" set up ctrlp
-map <Leader>p :CtrlPBuffer<CR>
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
-"let g:ctrlp_by_filename = 0             " match only by actual file name
-let g:ctrlp_regexp = 1                  " turn on regex, off with c-r
-let g:ctrlp_clear_cache_on_exit = 0     " don't delete cache
-let g:ctrlp_max_files = 0               " no limit
+" Unite
+" set up some defaults
+call unite#custom#profile('default', 'context', {
+\   'start_insert': 1,
+\   'no_split': 1,
+\ })
+
+" define a new source, 'listfiles' that calls my 'list-files' script
+let s:unite_source = {
+            \ 'name': 'listfiles',
+            \ 'is_volatile': 0
+            \ }
+
+" This function just returns the result of 'list-files' mapped into the
+" required structure; 'args' and 'context' are ignored for now.
+function! s:unite_source.gather_candidates(args, context)
+    let filelist = split(system('list-files'), "\n")
+    return map(filelist, '{
+          \ "word": v:val,
+          \ "source": "filelist",
+          \ "kind": "file",
+          \ "action__path": v:val,
+          \ }')
+endfunction
+
+call unite#define_source(s:unite_source)
+
+nnoremap <C-p> :Unite listfiles:!<cr>
+
