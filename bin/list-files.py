@@ -117,5 +117,7 @@ pwdPrefix = pwd + "/"
 for path in files:
     if path.startswith(pwdPrefix):
         print path[len(pwdPrefix):]
+    elif path.startswith(home):
+        print "~" + path[len(home):]
     else:
         print path
