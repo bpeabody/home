@@ -17,6 +17,8 @@ def run_test(test):
             sys.exit(1)
         elif 200 < result:
             sys.exit(0)
+        else:
+            break
 
 # Run each test driver passed in on the command-line
 
