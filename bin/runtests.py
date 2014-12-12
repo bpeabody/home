@@ -12,12 +12,10 @@ def run_test(test):
     while True:
         test_index = test_index + 1
         result = subprocess.call([test, str(test_index)])
-        if 1 == result:
+        if 0 > result:
             print "Test " + str(test_index) + " of '" + test + "' failed."
             sys.exit(1)
         elif 200 < result:
-            sys.exit(0)
-        else:
             break
 
 # Run each test driver passed in on the command-line
