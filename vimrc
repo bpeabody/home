@@ -20,6 +20,7 @@ Plugin 'vim-scripts/JavaScript-Indent'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/unite.vim'
+Plugin 'Keithbsmiley/swift.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
