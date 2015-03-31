@@ -129,8 +129,8 @@ au BufRead,BufNewFile *.bml setfiletype xml
 " YouCompleteMe
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_server_keep_logfiles = 1
-let g:ycm_server_use_vim_stdout = 1
-let g:ycm_server_log_level = 'debug'
+" let g:ycm_server_use_vim_stdout = 1
+" let g:ycm_server_log_level = 'debug'
 let g:ycm_confirm_extra_conf = 0        " stop pestering about file
 let g:ycm_complete_in_comments = 1      " allow completion in comments
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
