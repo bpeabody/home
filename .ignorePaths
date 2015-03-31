@@ -42,7 +42,6 @@ pcre
 /dmc.*.t.cpp
 /bslalg/
 /waf
-/bael/
 /bcefi/
 /bcefr/
 /bcesb/
