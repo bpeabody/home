@@ -126,8 +126,33 @@ def listFiles():
     paths = pruneList(paths)
     return paths
 
-files = listFiles()
 pwdPrefix = pwd + "/"
+
+def clean(path):
+    if path.startswith(pwdPrefix):
+        return path[len(pwdPrefix):]
+    elif path.startswith(home):
+        return "~" + path[len(home):]
+    else:
+        return path
+
+def comparePaths(l, r):
+    # we want to put paths with absolute dir last, and paths with cwd first
+    if l[0] == r[0]:
+        return cmp(l, r) # same first char, use normal logic
+    if l[0] == "/":
+        return 1         # left absolute, right not, left is larger
+    if r[0] == "/":
+        return -1        # right absolute, left not, left is smaller
+    if l[0] == "~":
+        return 1         # right must be local, so left is larger
+    if r[0] == "~":
+        return -1        # left must be local, so smaller
+    # both are local
+    return cmp(l, r)
+
+files = map(clean, listFiles())
+files.sort(cmp=comparePaths)
 
 # Print out all the relevant files, removing the prefix for the current working
 # directory before printing.
