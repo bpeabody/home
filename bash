@@ -16,5 +16,4 @@ shopt -s histappend
 stty -ixon
 
 alias gitkcl="git log --pretty=format:\"%h : %s\" --topo-order --graph"
-alias ssh="ssh -X"
 alias more=less
