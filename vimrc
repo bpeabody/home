@@ -167,3 +167,5 @@ call unite#define_source(s:unite_source)
 
 nnoremap <C-p> :Unite listfiles:!<cr>
 
+" Syntastic support broken for non-trivial swift usage, so disable it
+let g:syntastic_swift_checkers = []
