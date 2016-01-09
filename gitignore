@@ -68,3 +68,5 @@ Movies/
 Music/
 Pictures/
 Public/
+__pycache__
+*.pyc
