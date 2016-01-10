@@ -17,3 +17,9 @@ stty -ixon
 
 alias gitkcl="git log --pretty=format:\"%h : %s\" --topo-order --graph"
 alias more=less
+
+powerline-daemon -q
+
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. ~/repos/powerline/powerline/bindings/bash/powerline.sh
