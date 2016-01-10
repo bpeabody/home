@@ -106,6 +106,9 @@
                 "before": ":",
                 "width": 3,
                 "align": "l"
+            },
+            {
+                "function": "bufnr"
             }
         ]
     }
