@@ -21,6 +21,7 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'Keithbsmiley/swift.vim'
+Plugin 'benmills/vimux'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -169,3 +170,10 @@ nnoremap <C-p> :Unite listfiles:!<cr>
 
 " Syntastic support broken for non-trivial swift usage, so disable it
 let g:syntastic_swift_checkers = []
+
+" eclim
+let g:EclimCompletionMethod = 'omnifunc'
+
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
