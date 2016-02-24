@@ -171,9 +171,6 @@ nnoremap <C-p> :Unite listfiles:!<cr>
 " Syntastic support broken for non-trivial swift usage, so disable it
 let g:syntastic_swift_checkers = []
 
-" eclim
-let g:EclimCompletionMethod = 'omnifunc'
-
 python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
