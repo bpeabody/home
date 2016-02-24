@@ -12,6 +12,8 @@
 [alias]
     co = checkout
     com = commit
-    st = status --ignore-submodules
+    st = status
     br = branch
     pull = pull --ff-only
+[credential]
+	helper = osxkeychain
