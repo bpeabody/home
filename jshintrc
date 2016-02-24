@@ -11,11 +11,8 @@
     "quotmark" : "double",
     "trailing" : true,
     "undef"    : true,
-
-    "globals": {
-        "asyncDefine"  : true,
-        "define"       : true,
-        "defineModule" : true,
-        "prependError" : true
-    }
+    "node"     : true,
+    "unused"   : true,
+    "esnext"   : true,
+    "varstmt"  : true
 }
