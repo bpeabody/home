@@ -126,8 +126,6 @@ autocmd FileType txt call InitForText()
 " when joining, put two spaces after '.', '?', and '!'
 set joinspaces
 
-au BufRead,BufNewFile *.bml setfiletype xml
-
 " YouCompleteMe
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_server_keep_logfiles = 1
